@@ -1,9 +1,5 @@
 import customtkinter as ctk
-import os
-import time
-import threading
 from typing import Callable
-import datetime
 
 class Spinbox(ctk.CTkFrame):
     def __init__(self, *args,
@@ -88,6 +84,7 @@ class App(ctk.CTk):
         ctk.set_default_color_theme("green") 
         self.title("Spinbox_sample")
         self.geometry(f"{300}x{100}")
+        #Creating Main_Frame
         self.main_frame = ctk.CTkFrame(self, width=510,height=290, corner_radius=0)
         self.main_frame.grid(row=0, column=10,columnspan=10, rowspan=10, ipadx=5, ipady=0, padx=0, pady=0, sticky="nw")
         self.main_frame.grid_rowconfigure(3, weight=1)
@@ -106,3 +103,4 @@ if __name__ == "__main__":
     app = App()
     app.resizable(width=False, height=False)
     app.mainloop()
+#https://github.com/TomSchimansky/CustomTkinter and CodeSame @2023
